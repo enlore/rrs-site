@@ -1,0 +1,26 @@
+extends layout/base
+block body
+  .container
+    .row
+      .col-sm-4
+        h1 Skate With Us
+
+      .col-sm-8
+        h2 Fill This Out
+
+        form(action="", method="post")
+          .form-group
+            label() Who Are You?
+            input.form-control()
+
+          .form-group
+            label() Phone
+            input.form-control()
+
+          .form-group
+            label() Email
+            input.form-control()
+
+          .form-group
+            label() Why Do You Think You Should Skate With Us?
+            textarea.form-control()
