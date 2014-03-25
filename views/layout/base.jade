@@ -6,22 +6,41 @@ html
     link(rel="stylesheet", href="/css/main.css")
 
   body
-    .banner-wrap
+    .banner-wrap.hidden-sm.hidden-xs
+      .torn-paper.hidden-sm.hidden-xs
+    img.img-responsive.hidden-sm.hidden-xs.logo(src="/img/logo-lg.png")
 
     nav.navbar.navbar-default
       .container
         .navbar-header
-        ul.nav.navbar-nav
-          li
-            a(href="/") Home
-          li
-            a(href="/come_see_us.html") See Us
-          li
-            a(href="/skate_with_us.html") Skate With Us
-          li
-            a(href="/sponsor_us.html") Sponsor Us
+          button.navbar-toggle(data-toggle="collapse", data-target="#navbar-collapse")
+            span.icon-bar 
+            span.icon-bar 
+            span.icon-bar 
 
-    block body
+          a.navbar-brand(href="/")
+            img.img-responsive(src="/img/logo-sm.png")
+
+        #navbar-collapse.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-left
+            li
+              a(href="/") Home
+            li
+              a(href="/come_see_us.html") Buy Tickets
+
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href="/skate_with_us.html") Skate With Us
+            li
+              a(href="/sponsor_us.html") Sponsor Us
+
+    .page-wrap
+      block body
+
+    .footer
+      .container
+        p.pull-right &copy;2014 <a href="http://elcreativegroup.com">E|L Creative Group</a>
+        p woo
 
     script(src="/js/vendor/jquery.min.js")
     script(src="/js/vendor/bootstrap.min.js")

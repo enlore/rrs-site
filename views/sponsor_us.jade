@@ -3,12 +3,18 @@ block body
   .container
     .row
       .col-sm-12.text-center
-        a#sponsor-us.btn.btn-lg.btn-default(href="") Apply To Be A Sponsor
+        button#sponsor-us.btn.btn-lg.btn-default Apply To Be A Sponsor
+        form#sponsor-form.sponsor-form(action="", method="")
+          h2 Fill out this form and a team member will get in touch!
+          .form-group.row
+            label.control-label(form="") Field
+            input.form-control(type="", name="")
+
 
     .row
       .col-sm-12
         h1.underline Check Out Our Sponsors!
-        h2 Bob's Burger Shack
+        h2.text-center Bob's Burger Shack
         img.img-responsive.center-block(src="http://placehold.it/800x300")
         p. 
           "Nothing, Sir; but I have no doubt I shall soon learn. I've
@@ -23,10 +29,7 @@ block body
           eh?—Hast not been a pirate, hast thou?—Didst not rob thy
 
     .row
-      .col-sm-4
-        img.img-responsive.center-block(src="http://placehold.it/400x200")
-
-      .col-sm-8
+      .col-sm-7
         h2 The Bikers Who Care
         p.
           "Nothing, Sir; but I have no doubt I shall soon learn. I've
@@ -36,11 +39,15 @@ block body
           stern, if ever thou talkest of the marchant service to me
           again. Marchant service indeed! I suppose now ye feel
 
+      .col-sm-5
+        img.img-responsive.center-block(src="http://placehold.it/400x200")
+
+
     .row
       .col-sm-6
         .row
           .col-sm-6
-            img(src="http://placehold.it/200x150")
+            img.img-responsive.center-block(src="http://placehold.it/225x150")
           .col-sm-6
             p.
               "Nothing, Sir; but I have no doubt I shall soon learn. I've
@@ -50,9 +57,24 @@ block body
       .col-sm-6
         .row
           .col-sm-6
-            img(src="http://placehold.it/200x150")
+            img.img-responsive.center-block(src="http://placehold.it/225x150")
           .col-sm-6
             p.
               "Nothing, Sir; but I have no doubt I shall soon learn. I've
               been several voyages in the merchant service, and I think
               that—" "Merchant service be damned. Talk not that lingo to
+
+
+     .row
+       .col-sm-3.col-xs-6
+         img.center-block.img-responsive(src="http://placehold.it/250x75")
+       .col-sm-3.col-xs-6
+         img.center-block.img-responsive(src="http://placehold.it/250x75")
+       .col-sm-3.col-xs-6
+         img.center-block.img-responsive(src="http://placehold.it/250x75")
+       .col-sm-3.col-xs-6
+         img.center-block.img-responsive(src="http://placehold.it/250x75")
+       .col-sm-3.col-xs-6
+         img.center-block.img-responsive(src="http://placehold.it/250x75")
+       .col-sm-3.col-xs-6
+         img.center-block.img-responsive(src="http://placehold.it/250x75")

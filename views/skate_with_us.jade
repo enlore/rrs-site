@@ -2,25 +2,28 @@ extends layout/base
 block body
   .container
     .row
-      .col-sm-4
-        h1 Skate With Us
+      .col-sm-5
+        h1 Skate With Us!
 
-      .col-sm-8
+      .col-sm-7
         h2 Fill This Out
 
-        form(action="", method="post")
-          .form-group
-            label() Who Are You?
-            input.form-control()
+        form(action="/skate_form", method="post")
+          .form-group.row
+            .col-sm-12
+              label() Who Are You?
+              input.form-control(name="name")
 
-          .form-group
-            label() Phone
-            input.form-control()
+          .form-group.row
+            .col-sm-6
+              label() Phone
+              input.form-control()
 
-          .form-group
-            label() Email
-            input.form-control()
+            .col-sm-6
+              label() Email
+              input.form-control()
 
-          .form-group
-            label() Why Do You Think You Should Skate With Us?
-            textarea.form-control()
+          .form-group.row
+            .col-sm-12
+              label() Why Do You Think You Should Skate With Us?
+              textarea.form-control()

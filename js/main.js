@@ -1,3 +1,5 @@
 $(document).ready(function () {
-    console.log('butts')
+    $('#sponsor-us').on('click', function (e) {
+        $('#sponsor-form').toggleClass('active')
+    })
 })
