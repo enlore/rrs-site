@@ -1,3 +1,29 @@
+@red-river-red: #A40000;
+@headline-color: @red-river-red;
+@navbar-font-hover: @red-river-red;
+
+@black: #000;
+@headline-stroke: @black;
+@navbar-bg: @black;
+@navbar-border: @black;
+@footer-bg: @black;
+
+@grey: #eee;
+
+@white: #fff;
+@navbar-font-color: @white;
+
+h1, h2 {
+    color: @headline-color;
+    text-shadow:
+        -1px -1px 0 @headline-stroke,
+         1px -1px 0 @headline-stroke,
+        -1px  1px 0 @headline-stroke,
+         1px  1px 0 @headline-stroke;
+}
+
+h1 { font-size: 40px; }
+h2 { font-size: 34px; }
 h1,h2,h3,h4,h5,h6 { font-family: 'Oleo Script', cursive; }
 p, a, span, table, button { font-family: 'Merienda', cursive; }
 ul { list-style: none; }
@@ -17,19 +43,42 @@ ul { list-style: none; }
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 100px;
+    height: 92px;
     width: 100%;
     margin-top: -30px;
     z-index: 100;
 }
 
+.navbar-default {
+    background-color: @navbar-bg;
+    border-color: @navbar-border;
+    .navbar-nav > li > a {
+        color: @navbar-font-color;
+        &:hover,
+        &:focus {
+            color: @navbar-font-hover;
+            background-color: transparent;
+        }
+    }
+}
+
+.navbar.navbar-default {
+    border-radius: 0;
+}
+
 .page-wrap {
-    padding-top: 5em;
-    padding-bottom: 3em;
+    padding: 0;
+}
+
+@media screen and (min-width: 992px) {
+    .page-wrap {
+        padding-top: 4em;
+        padding-bottom: 3em;
+    }
 }
 
 .footer {
-    background: #eee;
+    background: @footer-bg;
     height: 40px;
     line-height: 40px;
     p { margin: 0; }
