@@ -1,63 +1,131 @@
 extends layout/base
 block body
-  .container
-    .row
-      .col-sm-12.text-center
-        button#sponsor-us.btn.btn-lg.btn-default Apply To Be A Sponsor
-        form#sponsor-form.sponsor-form(action="", method="")
+  .sponsor-us.container
+    .row.text-center
+      button#sponsor-us.btn.btn-lg.btn-default Apply To Be A Sponsor
+      form#sponsor-form.sponsor-form(action="", method="")
+        .col-sm-4
+          h2 Here's the Deal:
+          p.
+            We're a fantastic local, independent, not for profit, all women's sports
+            team with a significant audience that's well know for doing highly visibile
+            philanthropic work.
+
+          p.
+            You're a business that's motivated to cultivate a positive image in the
+            community and leverage smart opportunities for advertising to grow.
+
+          p.
+            You understand that you're signing up to be a sponsor for the 2014 season
+            and that the benefits of doing so only apply to 2014. You understand
+            that the benefits will start on March 1, 2014 or as soon as your
+            application has been approved by the Clarksville Roller Derby board
+            of directors and your contribution has been received.
+
+          p.
+            Finally, you understand that we're derby girls, not copy writers or
+            graphic designers.  You will be responsible for providing any copy
+            and graphics to be used for advertising purposes.
+
+        .col-sm-8
           h2 Fill out this form and a team member will get in touch!
           .form-group.row
-            label.control-label(form="") Field
-            input.form-control(type="", name="")
+            .col-sm-6
+              label.control-label(form="business_name") Business Name
+              input.form-control(type="text", name="business_name")
 
+            .col-sm-6
+              label.control-label(form="individual_name") Individual Name
+              input.form-control(type="text", name="individual_name")
+
+          .form-group.row
+            .col-sm-6
+              label.control-label(form="address") Street Address
+              input.form-control(type="text", name="address")
+
+            .col-sm-6
+              label.control-label(form="city") City
+              input.form-control(type="text", name="city")
+
+          .form-group.row
+            .col-sm-6
+              label.control-label(form="state") State
+              input.form-control(type="text", name="state")
+
+            .col-sm-6
+              label.control-label(form="zip_code") Zip Code
+              input.form-control(type="text", name="zip_code")
+
+          .form-group.row
+            .col-sm-6
+              label.control-label(form="business_phone") Business phone
+              input.form-control(type="text", name="business_phone")
+
+            .col-sm-6
+              label.control-label(form="cell_phone") Cell Phone
+              input.form-control(type="text", name="cell_phone")
+
+          .form-group.row
+            .col-sm-6
+              label.control-label(form="package") Preferred Package
+              select.form-control(type="text", name="package")
+                option The Lead Jammer - $1000
+                option The Pivot - $500
+                option The Blocker - $250
+                option The Penalty box - $200
+                option The Referee - $100
+                option Official Time Out - $100
+                option Team Time Out - $100
+                option Turn 3 Crash Zone - $100
+
+            .col-sm-6
+              label.control-label(form="bout_date") Bout Date
+              input.form-control(type="text", name="bout_date")
+
+          .form-group.row
+            .col-sm-12
+              label.control-label(form="notes") Notes
+              textarea.form-control(name="business_name", rows=4)
+
+          .form-group.row
+            .col-sm-12
+              button.btn.btn-default.btn-lg(type="submit") Fire Away!
 
     .row
       .col-sm-12
         h1.underline Check Out Our Sponsors!
-        h2.text-center Bob's Burger Shack
-        img.img-responsive.center-block(src="http://placehold.it/800x300")
+        h2.text-center All American Tattoo
+        img.img-responsive.center-block(src="/img/all_american.jpg")
         p. 
           "Nothing, Sir; but I have no doubt I shall soon learn. I've
           been several voyages in the merchant service, and I think
           that—" "Merchant service be damned. Talk not that lingo to
-          me. Dost see that leg?—I'll take that leg away from thy
-          stern, if ever thou talkest of the marchant service to me
-          again. Marchant service indeed! I suppose now ye feel
-          considerable proud of having served in those marchant
-          ships. But flukes! man, what makes thee want to go a
-          whaling, eh?—it looks a little suspicious, don't it,
-          eh?—Hast not been a pirate, hast thou?—Didst not rob thy
 
     .row
       .col-sm-7
-        h2 The Bikers Who Care
+        h2 Nightstalkers
         p.
           "Nothing, Sir; but I have no doubt I shall soon learn. I've
           been several voyages in the merchant service, and I think
-          that—" "Merchant service be damned. Talk not that lingo to
-          me. Dost see that leg?—I'll take that leg away from thy
-          stern, if ever thou talkest of the marchant service to me
-          again. Marchant service indeed! I suppose now ye feel
 
       .col-sm-5
-        img.img-responsive.center-block(src="http://placehold.it/400x200")
+        img.img-responsive.center-block(src="/img/nightstalkers.jpg")
 
 
     .row
       .col-sm-6
         .row
           .col-sm-6
-            img.img-responsive.center-block(src="http://placehold.it/225x150")
+            img.img-responsive.center-block(src="/img/appletons.jpg")
           .col-sm-6
             p.
               "Nothing, Sir; but I have no doubt I shall soon learn. I've
               been several voyages in the merchant service, and I think
-              that—" "Merchant service be damned. Talk not that lingo to
 
       .col-sm-6
         .row
           .col-sm-6
-            img.img-responsive.center-block(src="http://placehold.it/225x150")
+            img.img-responsive.center-block(src="/img/action_gear_and_diesel.jpg")
           .col-sm-6
             p.
               "Nothing, Sir; but I have no doubt I shall soon learn. I've
@@ -67,7 +135,7 @@ block body
 
      .row
        .col-sm-3.col-xs-6
-         img.center-block.img-responsive(src="http://placehold.it/250x75")
+         img.center-block.img-responsive(src="/img/truecarepharmacy.jpg")
        .col-sm-3.col-xs-6
          img.center-block.img-responsive(src="http://placehold.it/250x75")
        .col-sm-3.col-xs-6
