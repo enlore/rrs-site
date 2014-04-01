@@ -8,18 +8,19 @@
 @navbar-border: @black;
 @footer-bg: @black;
 
-@grey: #eee;
+@grey: #F2F2F2;
+@body-bg: @grey;
 
 @white: #fff;
 @navbar-font-color: @white;
+@bout-schedule-bg: @white;
+
+body {
+    background-color: @body-bg;
+}
 
 h1, h2 {
     color: @headline-color;
-    text-shadow:
-        -1px -1px 0 @headline-stroke,
-         1px -1px 0 @headline-stroke,
-        -1px  1px 0 @headline-stroke,
-         1px  1px 0 @headline-stroke;
 }
 
 h1 { font-size: 40px; }
@@ -37,7 +38,6 @@ ul { list-style: none; }
 
 .torn-paper {
     background-image: url('/img/torn_paper.png');
-    //background-size: contain, auto;
     background-repeat: repeat-x;
     background-position: 0 0;
     position: absolute;
@@ -46,6 +46,24 @@ ul { list-style: none; }
     height: 92px;
     width: 100%;
     margin-top: -30px;
+    z-index: 100;
+}
+
+.footer-banner {
+    background-image: url('/img/foot_banner.jpg');
+    position: relative;
+    height: 150px;
+}
+
+.torn-paper-bottom {
+    background-image: url('/img/torn_paper_bottom.png');
+    background-repeat: repeat-x;
+    background-position: 0 0;
+    position: absolute;
+    height: 92px;
+    width: 100%;
+    top: 0;
+    left: 0;
     z-index: 100;
 }
 
@@ -81,6 +99,7 @@ ul { list-style: none; }
     background: @footer-bg;
     height: 40px;
     line-height: 40px;
+    margin-top: 4em;
     p { margin: 0; }
 }
 
@@ -110,4 +129,9 @@ a.btn { margin-top: 20px; }
     z-index: 10000;
     margin: 0;
     margin-left: -140px;
+}
+
+.bout-schedule {
+    background: @bout-schedule-bg;
+    margin-top: 2em;
 }
