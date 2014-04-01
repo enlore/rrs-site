@@ -2,9 +2,8 @@ extends layout/base
 block body
   .index.container
     .row
-      .col-sm-7
-        h2 We Are
-        h1 The Red River Sirens
+      .col-md-6.col-md-push-3
+        h1 <span class="h2"> We Are The Red River Sirens
         p.
           Saving souls and reaching goals since 2010, Clarksville
           Roller Derby is a non-profit organization that breeds a
@@ -19,6 +18,65 @@ block body
           events to raise awareness for our sport and other local
           groups who seek a valuable partnership with us.
 
-      .col-sm-5.text-center
+      .col-md-3.col-md-pull-6
         a.btn.btn-lg.btn-default(href="/come_see_us.html") Come Watch Us Skate!
+        table.table.bout-schedule
+          thead
+            tr
+              th When?
+              th Where?
+              th Who's Gonna Get It?
+              
+          tbody
+            tr
+              td 3/29
+              td Home
+              td Intraleague - School of Hard Knocks - Nerds vs Jocks
+
+            tr
+              td 4/19
+              td Away
+              td Little City Roller Girls
+
+            tr
+              td 5/17
+              td Home
+              td Clarksvillain Roller Girls
+
+            tr
+              td 6/18
+              td Away
+              td Clarksvillain Roller Girls
+
+            tr
+              td 7/19
+              td Home
+              td Little City Roller Girls
+
+            tr
+              td 8/9
+              td Away
+              td Tragic City Roller Girls
+
+            tr
+              td 9/27
+              td Home
+              td Cape Girardeau Roller Girls
+            tr
+              td 10/4
+              td Away
+              td Hard Knox Roller Girls
+
+            tr
+              td 12/6
+              td Home
+              td All Star Bout!
+
+      .col-md-3.text-center
+        a.btn.btn-default.btn-lg(href="/sponsor_us.html") Become A Sponsor!
+
+        img.img-responsive(src="/img/all_american.jpg")
+        img.img-responsive(src="/img/all_american.jpg")
+        img.img-responsive(src="/img/all_american.jpg")
+        img.img-responsive(src="/img/all_american.jpg")
 
