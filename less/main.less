@@ -117,13 +117,24 @@ img { margin-top: 20px; }
 a.btn { margin-top: 20px; }
 .underline { border-bottom: 1px solid black; }
 
+.form-trans {
+    transition: height 500ms;
+    -webkit-transition: height 500ms;
+}
+
 .sponsor-form {
     height: 0;
     overflow: hidden;
 }
 
 .sponsor-form.active {
-    height: auto;
+    height: 1500px;
+}
+
+@media (min-width: 768px) {
+    .sponsor-form.active {
+        height: 750px; 
+    }
 }
 
 .fresh-meat-form {
@@ -132,7 +143,13 @@ a.btn { margin-top: 20px; }
 }
 
 .fresh-meat-form.active {
-    height: auto;
+    height: 430px;
+}
+
+@media (min-width: 768px) {
+    .sponsor-form.active {
+        height: 375px; 
+    }
 }
 
 .navbar-brand {
