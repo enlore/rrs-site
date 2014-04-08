@@ -2,6 +2,9 @@
 @headline-color: @red-river-red;
 @navbar-font-hover: @red-river-red;
 
+@red: #ff0000;
+@active-link: @red;
+
 @black: #000;
 @headline-stroke: @black;
 @navbar-bg: @black;
@@ -73,11 +76,16 @@ ul { list-style: none; }
     border-color: @navbar-border;
     .navbar-nav > li > a {
         color: @navbar-font-color;
+        font-size: 18px;
+        padding-right: 30px;
         &:hover,
         &:focus {
             color: @navbar-font-hover;
             background-color: transparent;
         }
+    }
+    .navbar-nav > li > a.active {
+        color: @active-link; 
     }
 }
 
@@ -115,6 +123,15 @@ a.btn { margin-top: 20px; }
 }
 
 .sponsor-form.active {
+    height: auto;
+}
+
+.fresh-meat-form {
+    height: 0;
+    overflow: hidden;
+}
+
+.fresh-meat-form.active {
     height: auto;
 }
 

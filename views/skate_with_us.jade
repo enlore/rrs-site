@@ -2,28 +2,148 @@ extends layout/base
 block body
   .skate-with-us.container
     .row
-      .col-sm-5
-        h1 Skate With Us!
+      .col-sm-8.col-sm-offset-2
+        h1.text-center Skate With Us!
+        button#fresh-meat-button.btn.btn-default.btn-lg.center-block(type="button") Form Here
 
-      .col-sm-7
-        h2 Fill This Out
+        #fresh-meat-form.fresh-meat-form
+          h2 Fill this out:
+          form(action="/skate_form", method="post")
+            .form-group.row
+              .col-sm-12
+                label() Who Are You?
+                input.form-control(name="name")
 
-        form(action="/skate_form", method="post")
-          .form-group.row
-            .col-sm-12
-              label() Who Are You?
-              input.form-control(name="name")
+            .form-group.row
+              .col-sm-6
+                label() Phone
+                input.form-control()
 
-          .form-group.row
-            .col-sm-6
-              label() Phone
-              input.form-control()
+              .col-sm-6
+                label() Email
+                input.form-control()
 
-            .col-sm-6
-              label() Email
-              input.form-control()
+            .form-group.row
+              .col-sm-12
+                label() Why Do You Think You Should Skate With Us?
+                textarea.form-control()
 
-          .form-group.row
-            .col-sm-12
-              label() Why Do You Think You Should Skate With Us?
-              textarea.form-control()
+            .form-group.row
+              .col-sm-12
+                button.btn.btn-default.btn-lg(type="submit") Hit us up!
+
+    .row
+      .col-sm-12
+        h1 Meet the Red River Sirens
+        .row
+          .col-sm-6
+            .row
+              .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                img.center-block.img-responsive(src="http://placehold.it/200x300")
+
+              .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                p.bio.
+                  "What will the owners say, sir?" "Let the owners stand on
+                  Nantucket beach and outyell the Typhoons. What cares Ahab?
+                  Owners, owners? Thou art always prating to me, Starbuck, about
+                  those miserly owners, as if the owners were my conscience. But
+                  look ye, the only real owner of anything is its commander; and
+
+
+          .col-sm-6
+            .row
+              .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                img.center-block.img-responsive(src="http://placehold.it/200x300")
+
+              .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                p.bio.
+                  "What will the owners say, sir?" "Let the owners stand on
+                  Nantucket beach and outyell the Typhoons. What cares Ahab?
+                  Owners, owners? Thou art always prating to me, Starbuck, about
+                  those miserly owners, as if the owners were my conscience. But
+                  look ye, the only real owner of anything is its commander; and
+
+        .row
+          .col-sm-6
+            .row
+              .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                img.center-block.img-responsive(src="http://placehold.it/200x300")
+
+              .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                p.bio.
+                  "What will the owners say, sir?" "Let the owners stand on
+                  Nantucket beach and outyell the Typhoons. What cares Ahab?
+                  Owners, owners? Thou art always prating to me, Starbuck, about
+                  those miserly owners, as if the owners were my conscience. But
+                  look ye, the only real owner of anything is its commander; and
+
+
+          .col-sm-6
+            .row
+              .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                img.center-block.img-responsive(src="http://placehold.it/200x300")
+
+              .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                p.bio.
+                  "What will the owners say, sir?" "Let the owners stand on
+                  Nantucket beach and outyell the Typhoons. What cares Ahab?
+                  Owners, owners? Thou art always prating to me, Starbuck, about
+                  those miserly owners, as if the owners were my conscience. But
+                  look ye, the only real owner of anything is its commander; and
+
+        .row
+          .col-sm-6
+            .row
+              .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                img.center-block.img-responsive(src="http://placehold.it/200x300")
+
+              .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                p.bio.
+                  "What will the owners say, sir?" "Let the owners stand on
+                  Nantucket beach and outyell the Typhoons. What cares Ahab?
+                  Owners, owners? Thou art always prating to me, Starbuck, about
+                  those miserly owners, as if the owners were my conscience. But
+                  look ye, the only real owner of anything is its commander; and
+
+
+          .col-sm-6
+            .row
+              .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                img.center-block.img-responsive(src="http://placehold.it/200x300")
+
+              .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                p.bio.
+                  "What will the owners say, sir?" "Let the owners stand on
+                  Nantucket beach and outyell the Typhoons. What cares Ahab?
+                  Owners, owners? Thou art always prating to me, Starbuck, about
+                  those miserly owners, as if the owners were my conscience. But
+                  look ye, the only real owner of anything is its commander; and
+
+        .row
+          .col-sm-6
+            .row
+              .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                img.center-block.img-responsive(src="http://placehold.it/200x300")
+
+              .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                p.bio.
+                  "What will the owners say, sir?" "Let the owners stand on
+                  Nantucket beach and outyell the Typhoons. What cares Ahab?
+                  Owners, owners? Thou art always prating to me, Starbuck, about
+                  those miserly owners, as if the owners were my conscience. But
+                  look ye, the only real owner of anything is its commander; and
+
+
+          .col-sm-6
+            .row
+              .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                img.center-block.img-responsive(src="http://placehold.it/200x300")
+
+              .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                p.bio.
+                  "What will the owners say, sir?" "Let the owners stand on
+                  Nantucket beach and outyell the Typhoons. What cares Ahab?
+                  Owners, owners? Thou art always prating to me, Starbuck, about
+                  those miserly owners, as if the owners were my conscience. But
+                  look ye, the only real owner of anything is its commander; and
+
