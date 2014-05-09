@@ -1,4 +1,5 @@
 from fabric.api import *
+import os
 
 env.hosts = ['']
 env.user = ''
@@ -11,7 +12,7 @@ def deploy():
     pass
 
 def dev():
-    local('nodemon -e ".jade|.less|.js" -w js -w less -w views -x python /usr/local/bin/fab compile')
+    local('nodemon -e "jade,less,js" -w js -w less -w views -x python /usr/local/bin/fab compile')
 
 def compile():
     css()
