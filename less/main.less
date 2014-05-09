@@ -228,6 +228,8 @@ section.intro {
     background-image: url('/img/rink_panels.jpg');
     background-position: -300px -100px;
     border-bottom: 8px solid @black;
+    padding-top: 2em;
+    padding-bottom: 2em;
 }
 
 @media screen and (min-width: 768px) {
@@ -244,13 +246,15 @@ section.intro {
 }
 
 section.kick-ass {
+    background: transparent;
+
     .left {
         padding-top: 2em; 
         padding-bottom: 2em; 
         border-bottom: 8px solid @black;
         background-image: url('/img/we-kick-ass.jpg');
         background-repeat: no-repeat;
-        background-position: 0 -230px;
+        background-position: 0 -330px;
         background-size: cover;
         .copy {
             background-color: @black; 
@@ -280,9 +284,7 @@ section.kick-ass {
 @media screen and (min-width: 768px) {
     section.kick-ass {
         height: 470px;
-        background: transparent;
         position: relative;
-        overflow: hidden;
         .left .copy, .right .copy {
             width: 85%;
             margin: 0 auto; 
@@ -295,6 +297,7 @@ section.kick-ass {
             height: 100%;
             border-right: 4px solid @black;
             border-bottom: 8px solid @black;
+            background-position: 0 -40px;
         }
         .right {
             padding-top: 4em;
@@ -305,6 +308,44 @@ section.kick-ass {
             height: 100%;
             border-left: 4px solid @black;
             border-bottom: 8px solid @black;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    section.kick-ass {
+        .left {
+            padding-top: 1.5em;
+            background-position: 0 -50px; 
+        }
+
+        .right {
+            padding-top: 1.5em;
+            background-position: 0 0; 
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    section.kick-ass {
+        .left {
+            padding-top: 2em; 
+        }
+
+        .right {
+            padding-top: 2em;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    section.kick-ass {
+        .left {
+            padding-top: 3em;
+        }
+
+        .right {
+            padding-top: 3em;
         }
     }
 }
