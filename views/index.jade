@@ -1,85 +1,71 @@
 extends layout/base
 block body
-  .index.container
-    .row
-      .col-md-6.col-md-push-3
-        h1 We Are The Red River Sirens
-        p.
-          Saving souls and reaching goals since 2010, Clarksville
-          Roller Derby is a non-profit organization that breeds a
-          confident, competitive, and charitable spirit among our
-          all-female athletic team, THE RED RIVER SIRENS.  
-          
-        p.
-          Since our first competitive season in 2011, the Red River
-          Sirens have raised and donated over <b>$15,000</b> for local
-          non-profit organizations and businesses.  We participate
-          in games, called BOUTS, and also put on fundraisers and
-          events to raise awareness for our sport and other local
-          groups who seek a valuable partnership with us.
+  .index
+    section.intro
+      .container
+        .row
+          .col-md-12
+            h1.text-center We Are The Red River Sirens
+            p.intro-copy.
+              Saving souls and reaching goals since 2010, Clarksville
+              Roller Derby is a non-profit organization that breeds a
+              confident, competitive, and charitable spirit among our
+              all-female athletic team, <b>The Red River Sirens</b>.  
+            
 
-        h2 Get to know us.
-        p Wanna skate be a part of the team? <a href="/skate_with_us.html">Skate with us!</a>
+    section.kick-ass.text-center
+        .left
+          .copy
+            h2 We Are A Kick Ass Roller Derby Team
+            p.
+              We skate in competitive matches, called <b>bouts</b>, against
+              other regional teams for charity and bragging rights.  If you've
+              never seen a roller derby match, think roller skates and rugby.
 
-      .col-md-3.col-md-pull-6
-        a.btn.btn-lg.btn-default(href="/come_see_us.html") Come Watch Us Skate!
-        table.table.bout-schedule
-          thead
-            tr
-              th When?
-              th Where?
-              th Who's Gonna Get It?
-              
-          tbody
-            tr
-              td 3/29
-              td Home
-              td Intraleague - School of Hard Knocks - Nerds vs Jocks
+            .billy
 
-            tr
-              td 4/19
-              td Away
-              td Little City Roller Girls
+        .right
+          .copy
+            a(href="/skate_with_us.html")
+              //img.skate-with-us-cta.img-responsive.center-block(src="/img/skate_with_us.png", alt="Skate with us!")
 
-            tr
-              td 5/17
-              td Home
-              td Clarksvillain Roller Girls
+            h2 Skate With The Best
+            p.
+              Wanna be a part of something bigger? Do you enjoy skating hard and
+              moderate to heavy ass-kicking? Is agression your natural response to
+              conflict?
 
-            tr
-              td 6/18
-              td Away
-              td Clarksvillain Roller Girls
+            p.
+              You might have a future as a roller derby girl.
 
-            tr
-              td 7/19
-              td Home
-              td Little City Roller Girls
+    section.we-make-a-difference
+      .container
+        .row
+          .col-md-6
+            h2.text-center We Make A Difference
+            p.
+              Since our first competitive season in 2011, the Red River
+              Sirens have raised and donated over <b>$15,000</b> for local
+              non-profit organizations and businesses.
 
-            tr
-              td 8/9
-              td Away
-              td Tragic City Roller Girls
+            .text-center
+              a.btn.btn-rrs.btn-lg(href="/sponsor_us.html") Become A Sponsor!
 
-            tr
-              td 9/27
-              td Home
-              td Cape Girardeau Roller Girls
-            tr
-              td 10/4
-              td Away
-              td Hard Knox Roller Girls
+          .col-md-6.text-center
+            img.img-responsive(src="/img/all_american.jpg")
 
-            tr
-              td 12/6
-              td Home
-              td All Star Bout!
 
-      .col-md-3.text-center
-        a.btn.btn-default.btn-lg(href="/sponsor_us.html") Become A Sponsor!
+    section.come-see-us
+      .container
+        .row
+          .col-md-8.col-md-offset-2
+            .text-center
+              h1 Experience The Red River Sirens
+              p.
+                We skate with the home rink advantage at 
+                <a target="blank_" href="https://www.facebook.com/MagicWheels1">Magic Wheels</a> on Ft. Campbell Blvd. Come get
+                buck rink-side!
 
-        img.img-responsive(src="/img/all_american.jpg")
-        img.img-responsive(src="/img/all_american.jpg")
-        img.img-responsive(src="/img/all_american.jpg")
-        img.img-responsive(src="/img/all_american.jpg")
+              a.btn.btn-lg.btn-rrs(href="") Get Your Tickets!
+            include bout_schedule
 

@@ -6,7 +6,12 @@ html
     link(rel="stylesheet", href="/css/main.css")
 
   body
-    .banner-wrap.hidden-sm.hidden-xs
+    #banner-carousel.carousel.slide.banner-wrap.hidden-sm.hidden-xs(data-ride="carousel")
+      .carousel-inner
+        .item.one.active
+        .item.two
+        .item.three
+
       .torn-paper.hidden-sm.hidden-xs
     img.img-responsive.hidden-sm.hidden-xs.logo(src="/img/logo-lg.png")
 
@@ -26,7 +31,7 @@ html
             li
               a.active(href="/") Home
             li
-              a(href="/come_see_us.html") Come See Us
+              a(href="/come_see_us.html") See Us Skate
 
           ul.nav.navbar-nav.navbar-right
             li

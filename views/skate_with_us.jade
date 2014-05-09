@@ -1,149 +1,398 @@
 extends layout/base
 block body
-  .skate-with-us.container
-    .row
-      .col-sm-8.col-sm-offset-2
-        h1.text-center Skate With Us!
-        button#fresh-meat-button.btn.btn-default.btn-lg.center-block(type="button") Form Here
+  section.skate-with-us
+    .container
+      .row
+        .col-sm-8.col-sm-offset-2
+          h1.text-center Skate With Us!
+          button#fresh-meat-button.btn.btn-default.btn-lg.center-block(type="button") Form Here
 
-        #fresh-meat-form.fresh-meat-form.form-trans
-          h2 Fill this out:
-          form(action="/skate_form", method="post")
-            .form-group.row
-              .col-sm-12
-                label() Who Are You?
-                input.form-control(name="name")
+          #fresh-meat-form.fresh-meat-form.form-trans
+            h2 Fill this out:
+            form(action="/skate_form", method="post")
+              .form-group.row
+                .col-sm-12
+                  label() Who Are You?
+                  input.form-control(name="name")
 
-            .form-group.row
-              .col-sm-6
-                label() Phone
-                input.form-control()
+              .form-group.row
+                .col-sm-6
+                  label() Phone
+                  input.form-control()
 
-              .col-sm-6
-                label() Email
-                input.form-control()
+                .col-sm-6
+                  label() Email
+                  input.form-control()
 
-            .form-group.row
-              .col-sm-12
-                label() Why Do You Think You Should Skate With Us?
-                textarea.form-control()
+              .form-group.row
+                .col-sm-12
+                  label() Why Do You Think You Should Skate With Us?
+                  textarea.form-control()
 
-            .form-group.row
-              .col-sm-12
-                button.btn.btn-default.btn-lg(type="submit") Hit us up!
+              .form-group.row
+                .col-sm-12
+                  button.btn.btn-default.btn-lg(type="submit") Hit us up!
 
-    .row
-      .col-sm-12
-        h1 Meet the Red River Sirens
-        .row
-          .col-sm-6
-            .row
-              .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
-                img.center-block.img-responsive(src="/img/headshots/president.jpg")
+      .row
+        .col-sm-12
+          h1 Meet the Red River Sirens
+          .row
+            .col-sm-6
+              .row
+                .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                  img.center-block.img-responsive(src="/img/headshots/RedRiverSirens16_a.jpg")
 
-              .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
-                p.bio.
-                  "What will the owners say, sir?" "Let the owners stand on
-                  Nantucket beach and outyell the Typhoons. What cares Ahab?
-                  Owners, owners? Thou art always prating to me, Starbuck, about
-                  those miserly owners, as if the owners were my conscience. But
-                  look ye, the only real owner of anything is its commander; and
-
-
-          .col-sm-6
-            .row
-              .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
-                img.center-block.img-responsive(src="http://placehold.it/200x300")
-
-              .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
-                p.bio.
-                  "What will the owners say, sir?" "Let the owners stand on
-                  Nantucket beach and outyell the Typhoons. What cares Ahab?
-                  Owners, owners? Thou art always prating to me, Starbuck, about
-                  those miserly owners, as if the owners were my conscience. But
-                  look ye, the only real owner of anything is its commander; and
-
-        .row
-          .col-sm-6
-            .row
-              .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
-                img.center-block.img-responsive(src="http://placehold.it/200x300")
-
-              .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
-                p.bio.
-                  "What will the owners say, sir?" "Let the owners stand on
-                  Nantucket beach and outyell the Typhoons. What cares Ahab?
-                  Owners, owners? Thou art always prating to me, Starbuck, about
-                  those miserly owners, as if the owners were my conscience. But
-                  look ye, the only real owner of anything is its commander; and
+                .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                  h3 #.50 Ma Deuce
+                  p.bio.
+                    "What will the owners say, sir?" "Let the owners stand on
+                    Nantucket beach and outyell the Typhoons. What cares Ahab?
+                    Owners, owners? Thou art always prating to me, Starbuck, about
+                    those miserly owners, as if the owners were my conscience. But
+                    look ye, the only real owner of anything is its commander; and
 
 
-          .col-sm-6
-            .row
-              .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
-                img.center-block.img-responsive(src="http://placehold.it/200x300")
+            .col-sm-6
+              .row
+                .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                  img.center-block.img-responsive(src="/img/headshots/RedRiverSirens1_a.jpg")
 
-              .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
-                p.bio.
-                  "What will the owners say, sir?" "Let the owners stand on
-                  Nantucket beach and outyell the Typhoons. What cares Ahab?
-                  Owners, owners? Thou art always prating to me, Starbuck, about
-                  those miserly owners, as if the owners were my conscience. But
-                  look ye, the only real owner of anything is its commander; and
+                .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                  h3 Hi Lee Toxic
+                  p.bio.
+                    "What will the owners say, sir?" "Let the owners stand on
+                    Nantucket beach and outyell the Typhoons. What cares Ahab?
+                    Owners, owners? Thou art always prating to me, Starbuck, about
+                    those miserly owners, as if the owners were my conscience. But
+                    look ye, the only real owner of anything is its commander; and
 
-        .row
-          .col-sm-6
-            .row
-              .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
-                img.center-block.img-responsive(src="http://placehold.it/200x300")
+          .row
+            .col-sm-6
+              .row
+                .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                  img.center-block.img-responsive(src="/img/headshots/RedRiverSirens11_a.jpg")
 
-              .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
-                p.bio.
-                  "What will the owners say, sir?" "Let the owners stand on
-                  Nantucket beach and outyell the Typhoons. What cares Ahab?
-                  Owners, owners? Thou art always prating to me, Starbuck, about
-                  those miserly owners, as if the owners were my conscience. But
-                  look ye, the only real owner of anything is its commander; and
-
-
-          .col-sm-6
-            .row
-              .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
-                img.center-block.img-responsive(src="http://placehold.it/200x300")
-
-              .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
-                p.bio.
-                  "What will the owners say, sir?" "Let the owners stand on
-                  Nantucket beach and outyell the Typhoons. What cares Ahab?
-                  Owners, owners? Thou art always prating to me, Starbuck, about
-                  those miserly owners, as if the owners were my conscience. But
-                  look ye, the only real owner of anything is its commander; and
-
-        .row
-          .col-sm-6
-            .row
-              .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
-                img.center-block.img-responsive(src="http://placehold.it/200x300")
-
-              .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
-                p.bio.
-                  "What will the owners say, sir?" "Let the owners stand on
-                  Nantucket beach and outyell the Typhoons. What cares Ahab?
-                  Owners, owners? Thou art always prating to me, Starbuck, about
-                  those miserly owners, as if the owners were my conscience. But
-                  look ye, the only real owner of anything is its commander; and
+                .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                  h3 #R247 Buttercup Bunzz
+                  p.bio.
+                    "What will the owners say, sir?" "Let the owners stand on
+                    Nantucket beach and outyell the Typhoons. What cares Ahab?
+                    Owners, owners? Thou art always prating to me, Starbuck, about
+                    those miserly owners, as if the owners were my conscience. But
+                    look ye, the only real owner of anything is its commander; and
 
 
-          .col-sm-6
-            .row
-              .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
-                img.center-block.img-responsive(src="http://placehold.it/200x300")
+            .col-sm-6
+              .row
+                .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                  img.center-block.img-responsive(src="img/headshots/RedRiverSirens12.jpg")
 
-              .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
-                p.bio.
-                  "What will the owners say, sir?" "Let the owners stand on
-                  Nantucket beach and outyell the Typhoons. What cares Ahab?
-                  Owners, owners? Thou art always prating to me, Starbuck, about
-                  those miserly owners, as if the owners were my conscience. But
-                  look ye, the only real owner of anything is its commander; and
+                .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                  h3 #0000 Zombie Apocalyzz
+                  p.bio.
+                    "What will the owners say, sir?" "Let the owners stand on
+                    Nantucket beach and outyell the Typhoons. What cares Ahab?
+                    Owners, owners? Thou art always prating to me, Starbuck, about
+                    those miserly owners, as if the owners were my conscience. But
+                    look ye, the only real owner of anything is its commander; and
 
+          .row
+            .col-sm-6
+              .row
+                .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                  img.center-block.img-responsive(src="/img/headshots/RedRiverSirens13_a.jpg")
+
+                .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                  h3 #49 Rika Bobby
+                  p.bio.
+                    "What will the owners say, sir?" "Let the owners stand on
+                    Nantucket beach and outyell the Typhoons. What cares Ahab?
+                    Owners, owners? Thou art always prating to me, Starbuck, about
+                    those miserly owners, as if the owners were my conscience. But
+                    look ye, the only real owner of anything is its commander; and
+
+
+            .col-sm-6
+              .row
+                .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                  img.center-block.img-responsive(src="/img/headshots/RedRiverSirens14_a.jpg")
+
+                .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                  h3 #187 Redrum Ridinghood
+                  p.bio.
+                    "What will the owners say, sir?" "Let the owners stand on
+                    Nantucket beach and outyell the Typhoons. What cares Ahab?
+                    Owners, owners? Thou art always prating to me, Starbuck, about
+                    those miserly owners, as if the owners were my conscience. But
+                    look ye, the only real owner of anything is its commander; and
+
+          .row
+            .col-sm-6
+              .row
+                .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                  img.center-block.img-responsive(src="/img/headshots/RedRiverSirens2.jpg")
+
+                .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                  h3 #22 Atta Kontrol
+                  p.bio.
+                    "What will the owners say, sir?" "Let the owners stand on
+                    Nantucket beach and outyell the Typhoons. What cares Ahab?
+                    Owners, owners? Thou art always prating to me, Starbuck, about
+                    those miserly owners, as if the owners were my conscience. But
+                    look ye, the only real owner of anything is its commander; and
+
+            .col-sm-6
+              .row
+                .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                  img.center-block.img-responsive(src="/img/headshots/RedRiverSirens20.jpg")
+
+                .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                  h3 #411 Flava Ave
+                  p.bio.
+                    "What will the owners say, sir?" "Let the owners stand on
+                    Nantucket beach and outyell the Typhoons. What cares Ahab?
+                    Owners, owners? Thou art always prating to me, Starbuck, about
+                    those miserly owners, as if the owners were my conscience. But
+                    look ye, the only real owner of anything is its commander; and
+
+          .row
+            .col-sm-6
+              .row
+                .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                  img.center-block.img-responsive(src="/img/headshots/RedRiverSirens22_b.jpg")
+
+                .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                  h3 #931 KillN' Dem Hose
+                  p.bio.
+                    "What will the owners say, sir?" "Let the owners stand on
+                    Nantucket beach and outyell the Typhoons. What cares Ahab?
+                    Owners, owners? Thou art always prating to me, Starbuck, about
+                    those miserly owners, as if the owners were my conscience. But
+                    look ye, the only real owner of anything is its commander; and
+
+            .col-sm-6
+              .row
+                .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                  img.center-block.img-responsive(src="/img/headshots/RedRiverSirens24.jpg")
+
+                .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                  h3 Joleen - Referee
+                  p.bio.
+                    "What will the owners say, sir?" "Let the owners stand on
+                    Nantucket beach and outyell the Typhoons. What cares Ahab?
+                    Owners, owners? Thou art always prating to me, Starbuck, about
+                    those miserly owners, as if the owners were my conscience. But
+                    look ye, the only real owner of anything is its commander; and
+
+          .row
+            .col-sm-6
+              .row
+                .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                  img.center-block.img-responsive(src="/img/headshots/RedRiverSirens3.jpg")
+
+                .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                  h3 #1337 Hillzilla
+                  p.bio.
+                    "What will the owners say, sir?" "Let the owners stand on
+                    Nantucket beach and outyell the Typhoons. What cares Ahab?
+                    Owners, owners? Thou art always prating to me, Starbuck, about
+                    those miserly owners, as if the owners were my conscience. But
+                    look ye, the only real owner of anything is its commander; and
+
+            .col-sm-6
+              .row
+                .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                  img.center-block.img-responsive(src="/img/headshots/RedRiverSirens4_a.jpg")
+
+                .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                  h3 #0813 Lil Azzassinada
+                  p.bio.
+                    "What will the owners say, sir?" "Let the owners stand on
+                    Nantucket beach and outyell the Typhoons. What cares Ahab?
+                    Owners, owners? Thou art always prating to me, Starbuck, about
+                    those miserly owners, as if the owners were my conscience. But
+                    look ye, the only real owner of anything is its commander; and
+
+          .row
+            .col-sm-6
+              .row
+                .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                  img.center-block.img-responsive(src="/img/headshots/RedRiverSirens5_b.jpg")
+
+                .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                  h3 #64 DeRanged DeFrange
+                  p.bio.
+                    "What will the owners say, sir?" "Let the owners stand on
+                    Nantucket beach and outyell the Typhoons. What cares Ahab?
+                    Owners, owners? Thou art always prating to me, Starbuck, about
+                    those miserly owners, as if the owners were my conscience. But
+                    look ye, the only real owner of anything is its commander; and
+
+            .col-sm-6
+              .row
+                .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                  img.center-block.img-responsive(src="/img/headshots/RedRiverSirens6.jpg")
+
+                .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                  h3 #0511 Pepe le Juke
+                  p.bio.
+                    "What will the owners say, sir?" "Let the owners stand on
+                    Nantucket beach and outyell the Typhoons. What cares Ahab?
+                    Owners, owners? Thou art always prating to me, Starbuck, about
+                    those miserly owners, as if the owners were my conscience. But
+                    look ye, the only real owner of anything is its commander; and
+
+          .row
+            .col-sm-6
+              .row
+                .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                  img.center-block.img-responsive(src="/img/headshots/RedRiverSirens7.jpg")
+
+                .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                  h3 #16 Violat-Her
+                  p.bio.
+                    "What will the owners say, sir?" "Let the owners stand on
+                    Nantucket beach and outyell the Typhoons. What cares Ahab?
+                    Owners, owners? Thou art always prating to me, Starbuck, about
+                    those miserly owners, as if the owners were my conscience. But
+                    look ye, the only real owner of anything is its commander; and
+
+            .col-sm-6
+              .row
+                .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                  img.center-block.img-responsive(src="/img/headshots/RedRiverSirens8.jpg")
+
+                .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                  h3 #4 Nobody
+                  p.bio.
+                    "What will the owners say, sir?" "Let the owners stand on
+                    Nantucket beach and outyell the Typhoons. What cares Ahab?
+                    Owners, owners? Thou art always prating to me, Starbuck, about
+                    those miserly owners, as if the owners were my conscience. But
+                    look ye, the only real owner of anything is its commander; and
+
+          .row
+            .col-sm-6
+              .row
+                .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                  img.center-block.img-responsive(src="/img/headshots/RedRiverSirens9.jpg")
+
+                .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                  h3 #3B Goldie Blocks
+                  p.bio.
+                    "What will the owners say, sir?" "Let the owners stand on
+                    Nantucket beach and outyell the Typhoons. What cares Ahab?
+                    Owners, owners? Thou art always prating to me, Starbuck, about
+                    those miserly owners, as if the owners were my conscience. But
+                    look ye, the only real owner of anything is its commander; and
+
+            .col-sm-6
+              .row
+                .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                  img.center-block.img-responsive(src="/img/headshots/RedRiverSirens15_b.jpg")
+
+                .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                  h3 #R2D2 Toby-Wan Kenobi
+                  p.bio.
+                    "What will the owners say, sir?" "Let the owners stand on
+                    Nantucket beach and outyell the Typhoons. What cares Ahab?
+                    Owners, owners? Thou art always prating to me, Starbuck, about
+                    those miserly owners, as if the owners were my conscience. But
+                    look ye, the only real owner of anything is its commander; and
+
+          .row
+            .col-sm-6
+              .row
+                .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                  img.center-block.img-responsive(src="/img/headshots/RedRiverSirens18.jpg")
+
+                .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                  h3 #75 Audrey Hipburn
+                  p.bio.
+                    "What will the owners say, sir?" "Let the owners stand on
+                    Nantucket beach and outyell the Typhoons. What cares Ahab?
+                    Owners, owners? Thou art always prating to me, Starbuck, about
+                    those miserly owners, as if the owners were my conscience. But
+                    look ye, the only real owner of anything is its commander; and
+
+
+            .col-sm-6
+              .row
+                .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                  img.center-block.img-responsive(src="/img/headshots/RedRiverSirens10.jpg")
+
+                .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                  h3 #13 Bodacious Ta-Tas
+                  p.bio.
+                    "What will the owners say, sir?" "Let the owners stand on
+                    Nantucket beach and outyell the Typhoons. What cares Ahab?
+                    Owners, owners? Thou art always prating to me, Starbuck, about
+                    those miserly owners, as if the owners were my conscience. But
+                    look ye, the only real owner of anything is its commander; and
+
+          .row
+            .col-sm-8.col-sm-offset-2
+              h2 Meet The Meat!
+              p.well.
+                Here's this season's crop of new players. We call
+                them "fresh meat". They haven't earned their names
+                yet, so come out and encourage them to skate hard and
+                earn their places!
+
+          .row
+            .col-sm-6
+              .row
+                .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                  img.center-block.img-responsive(src="/img/headshots/RedRiverSirens17_b.jpg")
+
+                .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                  h3 Kelsey Littrell
+                  p.bio.
+                    "What will the owners say, sir?" "Let the owners stand on
+                    Nantucket beach and outyell the Typhoons. What cares Ahab?
+                    Owners, owners? Thou art always prating to me, Starbuck, about
+                    those miserly owners, as if the owners were my conscience. But
+                    look ye, the only real owner of anything is its commander; and
+
+            .col-sm-6
+              .row
+                .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                  img.center-block.img-responsive(src="/img/headshots/RedRiverSirens19_a.jpg")
+
+                .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                  h3 Nyeca Chino
+                  p.bio.
+                    "What will the owners say, sir?" "Let the owners stand on
+                    Nantucket beach and outyell the Typhoons. What cares Ahab?
+                    Owners, owners? Thou art always prating to me, Starbuck, about
+                    those miserly owners, as if the owners were my conscience. But
+                    look ye, the only real owner of anything is its commander; and
+
+          .row
+            .col-sm-6
+              .row
+                .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                  img.center-block.img-responsive(src="/img/headshots/RedRiverSirens21_b.jpg")
+
+                .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                  h3 Leesa Briles
+                  p.bio.
+                    "What will the owners say, sir?" "Let the owners stand on
+                    Nantucket beach and outyell the Typhoons. What cares Ahab?
+                    Owners, owners? Thou art always prating to me, Starbuck, about
+                    those miserly owners, as if the owners were my conscience. But
+                    look ye, the only real owner of anything is its commander; and
+
+            .col-sm-6
+              .row
+                .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                  img.center-block.img-responsive(src="/img/headshots/RedRiverSirens23.jpg")
+
+                .col-sm-6.col-sm-offset-0.col-xs-8.col-xs-offset-2
+                  h3 Mia Krystina
+                  p.bio.
+                    "What will the owners say, sir?" "Let the owners stand on
+                    Nantucket beach and outyell the Typhoons. What cares Ahab?
+                    Owners, owners? Thou art always prating to me, Starbuck, about
+                    those miserly owners, as if the owners were my conscience. But
+                    look ye, the only real owner of anything is its commander; and
