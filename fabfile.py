@@ -23,5 +23,5 @@ def css():
     local('lessc --strict-imports less/main.less > dist/css/main.css')
 
 def jade():
-    local('jade -o dist views')
+    local('jade -o dist/templates views')
 
