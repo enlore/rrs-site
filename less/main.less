@@ -9,6 +9,7 @@
 @active-link: @red;
 @btn-rrs: @red;
 @anchor-color: @red;
+@form-error: @red;
 
 @black: #000;
 @headline-stroke: @black;
@@ -25,6 +26,7 @@
 @navbar-font-color: @white;
 @bout-schedule-bg: @white;
 @btn-rrs-font-hover: @white;
+@form-flash: @white;
 
 body { background-color: @body-bg; color: @body-color;}
 
@@ -34,16 +36,36 @@ h1, h2 { color: @headline-color; }
 h1 { font-size: 40px; }
 h2 { font-size: 34px; }
 h1,h2,h3,h4,h5,h6 { font-family: 'Oleo Script', cursive; }
-p, a, span, table, button { font-family: 'Merienda', cursive; }
+label, p, a, span, table, button { font-family: 'Merienda', cursive; }
 ul { list-style: none; }
 p { font-size: 18px; }
+
+.shh {
+    display: none;
+}
+
+.error {
+    box-shadow: inset 0px 0px 2px 3px @form-error;
+    border-color: @form-error;
+}
+
+.flash {
+    color: @form-flash;
+}
+
+#address-flash {
+    display: none;
+}
+
+#address-flash.active {
+    display: block;
+}
 
 .btn-rrs {
     background-color: @btn-rrs;
     border: 2px solid @btn-rrs-border;
     color: @btn-rrs-font-hover; 
     padding: 1em 2em 1em 2em;
-    border-radius: 0;
     &:focus,
     &:hover,
     &:active {
@@ -124,10 +146,11 @@ p { font-size: 18px; }
 .navbar { margin-bottom: 0; }
 
 .footer {
+    color: @white;
     background: @footer-bg;
     height: 40px;
     line-height: 40px;
-    p { margin: 0; }
+    p { margin: 0; font-size: 14px; }
 }
 
 p { margin-top: 20px; }
@@ -365,12 +388,26 @@ section.skate-with-us {
     }
 }
 
+section.meet-the-team {
+    background-color: @red-river-red;
+    color: @black;
+    padding-bottom: 2em;
+
+    h1, h2 {
+        color: @white; 
+    }
+}
+
 section.we-make-a-difference {
     background-color: @red-river-red;
     padding-top: 2em;
     padding-bottom: 2em;
     h1, h2 {
         color: @white; 
+    }
+
+    .st-jude {
+        border: 6px solid @black; 
     }
 }
 
