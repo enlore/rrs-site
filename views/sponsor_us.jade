@@ -3,77 +3,83 @@ block body
   section.we-make-a-difference
     .container
       .row.text-center
-        h1 Become A Sponsor!
-        button#sponsor-us.btn.btn-lg.btn-rrs Apply To Be A Sponsor
+        .col-sm-12
+          h1 Become A Sponsor!
+          button#sponsor-us.btn.btn-lg.btn-rrs Apply To Be A Sponsor
+          h2.text-center {{ flash }}
 
-        form#sponsor-form.sponsor-form.form-trans(action="", method="")
-          .col-sm-4
-            h2 Here's the Deal:
-            p.
-              <b>We're</b> a fantastic local, independent, not for profit, all women's sports
-              team with a significant audience that's well know for doing highly visibile
-              philanthropic work.
+      #sponsor-form.sponsor-form.form-trans.row
+        .col-sm-4
+          h2 Here's the Deal:
+          p.
+            <b>We're</b> a fantastic, local, independent, nonprofit, all women's sports
+            team with a significant audience, and we're well known for doing highly visibile
+            philanthropic work.
 
-            p.hidden-sm.hidden-xs.
-              <b>You're</b> a business that's motivated to cultivate a positive image in the
-              community and leverage smart opportunities for advertising to grow.
+          p.hidden-sm.hidden-xs.
+            <b>You're</b> a business that's motivated to cultivate a positive image in the
+            community and leverage smart opportunities for advertising to grow.
 
-            p.
-              You understand that you're signing up to be a sponsor for the 2014 season
-              and that the benefits of doing so only apply to 2014. You understand
-              that the benefits will start on March 1, 2014 or as soon as your
-              application has been approved by the Clarksville Roller Derby board
-              of directors and your contribution has been received.
+          p.
+            <b>You</b> understand that you're signing up to be a sponsor for the 2014 season
+            and that the benefits of doing so only apply to 2014. You understand
+            that the benefits will start on March 1, 2014 or as soon as your
+            application has been approved by the Clarksville Roller Derby board
+            of directors and your contribution has been received.
 
-            p.
-              Finally, you understand that we're derby girls, not copy writers or
-              graphic designers.  You will be responsible for providing any copy
-              and graphics to be used for advertising purposes.
+          p.
+            Finally, you understand that we're derby girls, not copy writers or
+            graphic designers.  You will be responsible for providing any copy
+            and graphics to be used for advertising purposes.
 
-            h3 Got any questions? Call us!
-            h4 (931) 302 3000
+          h3 Got any questions? Call us!
+          h4 (931) 302 3000
 
-          .col-sm-8
-            h2 Fill out this form and a team member will get in touch!
+        .col-sm-8
+          h2 Fill out this form and a team member will get in touch!
+          form(action="/sponsor_us", method="post")
+            input.shh(type="text", name="bond")
+
             .form-group.row
               .col-sm-6
-                label.control-label(form="business_name") Business Name
+                label.control-label(name="business_name") Business Name
                 input.form-control(type="text", name="business_name")
 
               .col-sm-6
-                label.control-label(form="individual_name") Individual Name
+                label.control-label(name="individual_name") Individual Name
                 input.form-control(type="text", name="individual_name")
 
             .form-group.row
               .col-sm-6
-                label.control-label(form="address") Street Address
+                label.control-label(name="address") Street Address
                 input.form-control(type="text", name="address")
+                p#address-flash.flash Please give us an address!
 
               .col-sm-6
-                label.control-label(form="city") City
+                label.control-label(name="city") City
                 input.form-control(type="text", name="city")
 
             .form-group.row
               .col-sm-6
-                label.control-label(form="state") State
+                label.control-label(name="state") State
                 input.form-control(type="text", name="state")
 
               .col-sm-6
-                label.control-label(form="zip_code") Zip Code
+                label.control-label(name="zip_code") Zip Code
                 input.form-control(type="text", name="zip_code")
 
             .form-group.row
               .col-sm-6
-                label.control-label(form="business_phone") Business phone
+                label.control-label(name="business_phone") Business phone
                 input.form-control(type="text", name="business_phone")
 
               .col-sm-6
-                label.control-label(form="cell_phone") Cell Phone
+                label.control-label(name="cell_phone") Cell Phone
                 input.form-control(type="text", name="cell_phone")
 
             .form-group.row
               .col-sm-6
-                label.control-label(form="package") Preferred Package
+                label.control-label(name="package") Preferred Package
                 select.form-control(type="text", name="package")
                   option The Lead Jammer - $1000
                   option The Pivot - $500
@@ -85,13 +91,13 @@ block body
                   option Turn 3 Crash Zone - $100
 
               .col-sm-6
-                label.control-label(form="bout_date") Bout Date
+                label.control-label(name="bout_date") Bout Date
                 input.form-control(type="text", name="bout_date")
 
             .form-group.row
               .col-sm-12
-                label.control-label(form="notes") Notes
-                textarea.form-control(name="business_name", rows=4)
+                label.control-label(name="notes") Notes
+                textarea.form-control(name="notes", rows=4)
 
             .form-group.row
               .col-sm-12
@@ -104,14 +110,13 @@ block body
           h1.text-center Check Out Our Sponsors!
 
       .row
-        .col-sm-8.col-sm-offset-2
+        .col-sm-6
           h2.text-center All American Tattoo
-          img.img-responsive.center-block(src="/img/all_american.jpg")
+          img.img-responsive.center-block(src="/img/sponsors/all_american.jpg")
 
-      .row
-        .col-sm-8.col-sm-offset-2
-          h2.text-center Nightstalkers
-          img.img-responsive.center-block(src="/img/nightstalkers.jpg")
+        .col-sm-6
+          h2.text-center The Nightstalkers
+          img.img-responsive.center-block(src="/img/sponsors/nightstalkers.jpg")
 
       .row
         .col-sm-6
@@ -121,10 +126,42 @@ block body
         .col-sm-6
           .row
             .col-sm-12
-              h2.text-center Action Gear &amp; Diesel
-              img.img-responsive.center-block(src="/img/action_gear_and_diesel.jpg")
+              h2.text-center Sonus Car Audio
+              img.img-responsive.center-block(src="/img/sponsors/sonus.png")
 
           .row
             .col-sm-12
-              h2.text-center Truecare Pharmacy
-              img.center-block.img-responsive(src="/img/truecarepharmacy.jpg")
+              h2.text-center Circle J Ranch
+              img.img-responsive.center-block(src="/img/sponsors/circle_j.jpg")
+
+          .row
+            .col-sm-12
+              h2.text-center Clarksville Events
+              img.img-responsive.center-block(src="/img/sponsors/clarksville_events.jpg")
+
+      .row
+        .col-sm-6
+          h2.text-center Dr. Wallace Dental
+          img.img-responsive.center-block(src="/img/sponsors/dr_wallace.png")
+
+        .col-sm-6
+          h2.text-center Strait Up Karaoke &amp; DJ
+          img.img-responsive.center-block(src="/img/sponsors/strait_up.jpg")
+
+      .row
+        .col-sm-6
+          h2.text-center Eagle Mini Storage
+          img.img-responsive.center-block(src="/img/sponsors/eagle_mini.jpg")
+
+        .col-sm-6
+          h2.text-center BWC
+          img.img-responsive.center-block(src="/img/sponsors/bwc_fixed.jpg")
+
+      .row
+        .col-sm-6
+          h2.text-center Action Gear &amp; Diesel
+          img.img-responsive.center-block(src="/img/sponsors/action_gear_and_diesel.jpg")
+
+        .col-sm-6
+          h2.text-center Truecare Pharmacy
+          img.center-block.img-responsive(src="/img/sponsors/truecare.png")
