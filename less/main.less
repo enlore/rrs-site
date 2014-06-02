@@ -10,7 +10,9 @@
 @active-link: @red;
 @btn-rrs: @red;
 @anchor-color: @red;
-@form-error: @red;
+
+@orange: #FF7E00;
+@form-error: @orange;
 
 @black: #000;
 @headline-stroke: @black;
@@ -31,6 +33,11 @@
 
 body { background-color: @body-bg; color: @body-color;}
 
+.rink-panels-bg {
+    background-image: url('/img/rink_panels.jpg');
+    background-size: cover;
+}
+
 a { color: @anchor-color; &:hover, &:active { color: @anchor-active;}}
 
 h1, h2 { color: @headline-color; }
@@ -46,8 +53,13 @@ p { font-size: 18px; }
 }
 
 .error {
-    box-shadow: inset 0px 0px 2px 3px @form-error;
+    box-shadow: inset 0px 0px 0px 2px @form-error;
     border-color: @form-error;
+}
+
+.error-label {
+   color: @form-error;
+   font-size: 1.2em;
 }
 
 .flash {
@@ -65,7 +77,7 @@ p { font-size: 18px; }
 .btn-rrs {
     background-color: @btn-rrs;
     border: 2px solid @btn-rrs-border;
-    color: @btn-rrs-font-hover; 
+    color: @btn-rrs-font-hover;
     padding: 1em 2em 1em 2em;
     &:focus,
     &:hover,
@@ -76,7 +88,7 @@ p { font-size: 18px; }
 
 .banner-wrap {
     .item {
-        min-height: 300px; 
+        min-height: 300px;
     }
     .one {
         background-image: url("/img/banner1.jpg");
@@ -138,7 +150,7 @@ p { font-size: 18px; }
         }
     }
     .navbar-nav > li > a.active {
-        color: @active-link; 
+        color: @active-link;
     }
 }
 
@@ -175,7 +187,7 @@ a.btn { margin-top: 20px; }
 
 @media (min-width: 768px) {
     .sponsor-form.active {
-        height: 800px; 
+        height: 800px;
     }
 }
 
@@ -190,7 +202,7 @@ a.btn { margin-top: 20px; }
 
 @media (min-width: 768px) {
     .fresh-meat-form.active {
-        height: 375px; 
+        height: 375px;
     }
 }
 
@@ -218,14 +230,14 @@ a.btn { margin-top: 20px; }
 .bout-schedule-wrap {
     margin-top: 2em;
     th:nth-child(3), td:nth-child(3) {
-        text-align: right; 
+        text-align: right;
     }
 
 }
 
 .top-filigree {
     display: block;
-    background-image: url('/img/filigree.png'); 
+    background-image: url('/img/filigree.png');
     width: 200px;
     height: 63px;
     position: relative;
@@ -235,7 +247,7 @@ a.btn { margin-top: 20px; }
 
 .bottom-filigree {
     display: block;
-    background-image: url('/img/filigree-bottom.png'); 
+    background-image: url('/img/filigree-bottom.png');
     width: 200px;
     height: 63px;
     position: relative;
@@ -249,8 +261,7 @@ a.btn { margin-top: 20px; }
 
 
 section.intro {
-    background-image: url('/img/rink_panels.jpg');
-    background-position: -300px -100px;
+    .rink-panels-bg;
     border-bottom: 8px solid @black;
     padding-top: 2em;
     padding-bottom: 2em;
@@ -259,7 +270,7 @@ section.intro {
 @media screen and (min-width: 768px) {
     .intro-copy {
         margin-left: 7.5%;
-        width: 85%; 
+        width: 85%;
         font-size: 20px;
     }
 
@@ -273,15 +284,15 @@ section.kick-ass {
     background: transparent;
 
     .left {
-        padding-top: 2em; 
-        padding-bottom: 2em; 
+        padding-top: 2em;
+        padding-bottom: 2em;
         border-bottom: 8px solid @black;
         background-image: url('/img/we-kick-ass.jpg');
         background-repeat: no-repeat;
         background-position: 0 -330px;
         background-size: cover;
         .copy {
-            background-color: @black; 
+            background-color: @black;
             background-color: rgba(0, 0, 0, 0.8);
             padding: 2em;
             color: @white;
@@ -289,15 +300,15 @@ section.kick-ass {
     }
 
     .right {
-        padding-top: 2em; 
-        padding-bottom: 2em; 
+        padding-top: 2em;
+        padding-bottom: 2em;
         background-image: url('/img/skate_with_us.png');
         background-position: 0px -100px;
         background-repeat: no-repeat;
         background-size: cover;
         border-bottom: 8px solid @black;
         .copy {
-            background-color: @black; 
+            background-color: @black;
             background-color: rgba(0, 0, 0, 0.8);
             padding: 2em;
             color: @white;
@@ -311,7 +322,7 @@ section.kick-ass {
         position: relative;
         .left .copy, .right .copy {
             width: 85%;
-            margin: 0 auto; 
+            margin: 0 auto;
         }
         .left {
             padding-top: 4em;
@@ -340,12 +351,12 @@ section.kick-ass {
     section.kick-ass {
         .left {
             padding-top: 1.5em;
-            background-position: 0 -50px; 
+            background-position: 0 -50px;
         }
 
         .right {
             padding-top: 1.5em;
-            background-position: 0 0; 
+            background-position: 0 0;
         }
     }
 }
@@ -353,7 +364,7 @@ section.kick-ass {
 @media screen and (min-width: 992px) {
     section.kick-ass {
         .left {
-            padding-top: 2em; 
+            padding-top: 2em;
         }
 
         .right {
@@ -379,11 +390,11 @@ section.skate-with-us {
     color: @black;
 
     h1, h2 {
-        color: @white; 
+        color: @white;
     }
 
     .group-portrait {
-        border: 6px solid @black; 
+        border: 6px solid @black;
     }
 }
 
@@ -400,7 +411,11 @@ section.meet-the-team {
     padding-bottom: 2em;
 
     h1, h2 {
-        color: @white; 
+        color: @white;
+    }
+
+    img {
+        border: 6px solid @black;
     }
 }
 
@@ -409,11 +424,11 @@ section.we-make-a-difference {
     padding-top: 2em;
     padding-bottom: 2em;
     h1, h2 {
-        color: @white; 
+        color: @white;
     }
 
     .st-jude {
-        border: 6px solid @black; 
+        border: 6px solid @black;
     }
 }
 
@@ -425,8 +440,7 @@ section.we-make-a-difference {
 }
 
 section.come-see-us {
-    background-image: url('/img/rink_panels.jpg');
-    background-position: -50px -100px;
+    .rink-panels-bg;
     border-top: 8px solid @black;
 }
 
@@ -437,8 +451,9 @@ section.come-see-us {
     }
 }
 
+
 section.come-see-us-page {
-    background-image: url('/img/rink_panels.jpg');
+    .rink-panels-bg;
 }
 
 @media screen and (min-width: 768px) {
@@ -454,7 +469,7 @@ section.our-sponsors {
 
 @media screen and (min-width: 768px) {
     section.our-sponsors {
-        padding-top: 6em; 
+        padding-top: 6em;
         padding-bottom: 6em;
     }
 }
@@ -476,7 +491,7 @@ section.our-sponsors {
 
 @media screen and (min-width: 768px) {
     .skate-with-us-cta {
-        display: block; 
+        display: block;
         height: 650px;
         width: auto;
     }
@@ -485,18 +500,19 @@ section.our-sponsors {
 .contact-us {
     padding-top: 6em;
     padding-bottom: 4em;
-    
+
     .contacts {
-        h3 { color: @black; } 
+        h3 { color: @black; }
     }
 }
 
 .thank-yous {
+    border-top: 8px solid @black;
     padding-top: 2em;
     padding-bottom: 4em;
     background-color: @thank-yous-bg;
     color: @white;
     h1,h2,h3 {
-        color: @white; 
+        color: @white;
     }
 }
