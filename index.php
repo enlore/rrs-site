@@ -13,12 +13,10 @@ class RRSApp extends Application {
 }
 
 $app = new RRSApp();
-$app['debug'] = true;
-$app['FORM_FLASH'] = "We've got your info, and we'll be in touch!";
+$app['ENV'] = getenv('APP_ENV') ?: 'production';
+$env = $app['ENV'];
 
-$app['MAILGUN_DOMAIN'] = 'elcreativegroup.com';
-$app['MAILGUN_KEY'] = 'key-1le00ub2z3uc8onmlmnk2sdph6-484v5';
-$app['MAILGUN_RECIPIENTS'] = 'n.e.lorenson@gmail.com';
+$app->register(new Igorw\Silex\ConfigServiceProvider(__DIR__."/$env.php"));
 
 # mailgun service
 $app['mg'] = function ($app) {
@@ -29,7 +27,7 @@ $app['mg'] = function ($app) {
 $app->register(new Silex\Provider\TwigServiceProvider(), array(
 	'twig.path' => __DIR__ . '/templates',
 	'twig.templates' => array(),
-	'twig.options' => array(), 
+	'twig.options' => array(),
 	'twig.class_path' => '',
 	'twig.form.templates' => array()
 ));
@@ -40,7 +38,7 @@ $app->get('/', function (Request $req) use ($app) {
 });
 
 $app->get('/contact-us', function () use ($app) {
-   return $app['twig']->render('contact-us.html'); 
+   return $app['twig']->render('contact-us.html');
 });
 
 $app->get('/come_see_us', function () use ($app) {
@@ -49,7 +47,7 @@ $app->get('/come_see_us', function () use ($app) {
 
 $app->get('/sponsor_us', function () use ($app) {
     return $app['twig']->render('sponsor_us.html', array(
-        'flash' => '' 
+        'flash' => ''
     ));
 });
 
@@ -72,8 +70,8 @@ $app->post('/sponsor_us', function (Request $req) use ($app) {
         $business_phone, $cell_phone, $notes);
 
     $app['mg']->sendMessage($app['MAILGUN_DOMAIN'], array(
-        'from' => 'rrs_app@clarksvillerollerderby.com', 
-        'to' => $app['MAILGUN_RECIPIENTS'], 
+        'from' => $app['MAILGUN_FROM'],
+        'to' => $app['MAILGUN_SPONSORSHIP_RECIPIENTS'],
         'subject' => 'SPONSORSHIP',
         'text' => $body
     ));
@@ -105,10 +103,10 @@ $app->post('/skate_with_us', function (Request $req) use ($app) {
     $body = sprintf($format, $name, $phone, $email, $reason);
 
     $app['mg']->sendMessage($app['MAILGUN_DOMAIN'], array(
-        'from' => 'rrs_app@clarksvillerollerderby.com', 
-        'to' => $app['MAILGUN_RECIPIENTS'], 
-        'subject' => 'FRESH MEAT', 
-        'text' => $body 
+        'from' => $app['MAILGUN_FROM'],
+        'to' => $app['MAILGUN_FRESH_MEAT_RECIPIENTS'],
+        'subject' => 'FRESH MEAT',
+        'text' => $body
     ));
 
     return $app['twig']->render('skate_with_us.html', array(
