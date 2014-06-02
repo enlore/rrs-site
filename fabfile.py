@@ -18,6 +18,7 @@ def compile():
     css()
     jade()
     local('cp index.php dist/index.php')
+    local('cp development.php production.php dist/')
     local('cp js/main.js dist/js/main.js')
 
 def css():
