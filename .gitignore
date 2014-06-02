@@ -3,3 +3,5 @@ dist/
 .vagrant
 config.py
 vagrant*
+development.php
+production.php
