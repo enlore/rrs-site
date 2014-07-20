@@ -99,7 +99,7 @@ $app->post('/skate_with_us', function (Request $req) use ($app) {
     $phone = $req->get('phone');
     $email = $req->get('email');
     $reason = $req->get('reason');
-    $format = "\nName: %s\nPhone: %s\nEmail: %s\nReason for joining: %s\n";
+    $format = "\nName: %s\nPhone: %s\nEmail: %s\nWhy skate with us: %s\n";
     $body = sprintf($format, $name, $phone, $email, $reason);
 
     $app['mg']->sendMessage($app['MAILGUN_DOMAIN'], array(
