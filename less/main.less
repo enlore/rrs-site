@@ -139,10 +139,13 @@ p { font-size: 18px; }
 .navbar-default {
     background-color: @navbar-bg;
     border-color: @navbar-border;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
     .navbar-nav > li > a {
         color: @navbar-font-color;
         font-size: 18px;
-        padding-right: 30px;
+        padding-right: 20px;
         &:hover,
         &:focus {
             color: @navbar-font-hover;
@@ -151,6 +154,11 @@ p { font-size: 18px; }
     }
     .navbar-nav > li > a.active {
         color: @active-link;
+    }
+    
+    .navbar-logo img {
+        margin-top: 0;
+        margin-left: 10px;
     }
 }
 
@@ -161,9 +169,10 @@ p { font-size: 18px; }
 .footer {
     color: @white;
     background: @footer-bg;
-    height: 40px;
+    //height: 40px;
     line-height: 40px;
     p { margin: 0; font-size: 14px; }
+    h3 { margin-top: 0; }
 }
 
 p { margin-top: 20px; }

@@ -3,6 +3,9 @@ html
   head
     title The Red River Sirens
     meta(name="viewport", content="initial-scale=1")
+
+    link(rel="shortcut icon", href="/img/favicon.ico")
+
     link(href='http://fonts.googleapis.com/css?family=Oleo+Script:400,700|Merienda:400,700',rel='stylesheet',type='text/css')
     link(rel="stylesheet", href="/css/vendor/bootstrap.min.css")
     link(rel="stylesheet", href="/css/main.css")
@@ -26,6 +29,9 @@ html
           a.navbar-brand(href="/")
             img.img-responsive(src="/img/logo-sm.png")
 
+        a.hidden-xs.navbar-logo.navbar-right(href="//facebook.com/redriversirens", target="_blank")
+          img.img-responsive(src="/img/fb.png")
+
         #navbar-collapse.collapse.navbar-collapse
           ul.nav.navbar-nav.navbar-left
             li
@@ -44,8 +50,13 @@ html
 
     .footer
       .container
-        p.pull-left
-          a(href="/contact-us") Contact Us
+        .pull-left
+          p
+            a(href="/contact-us") Contact Us
+
+          h3 
+            a(href="//facebook.com/redriversirens", target="_blank") Like Us on Facebook!
+
         p.pull-right &copy;2014 <a target="_blank" href="http://elcreativegroup.com">E|L Creative Group</a>
 
     .footer-banner.hidden-sm.hidden-xs
