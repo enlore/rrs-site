@@ -20,41 +20,43 @@ $app->register(new Igorw\Silex\ConfigServiceProvider(__DIR__."/$env.php"));
 
 # mailgun service
 $app['mg'] = function ($app) {
-	return new Mailgun($app['MAILGUN_KEY']);
+    return new Mailgun($app['MAILGUN_KEY']);
 };
 
 # twig
 $app->register(new Silex\Provider\TwigServiceProvider(), array(
-	'twig.path' => __DIR__ . '/templates',
-	'twig.templates' => array(),
-	'twig.options' => array(),
-	'twig.class_path' => '',
-	'twig.form.templates' => array()
+    'twig.path' => __DIR__ . '/templates',
+    'twig.templates' => array(),
+    'twig.options' => array(),
+    'twig.class_path' => '',
+    'twig.form.templates' => array()
 ));
 
 $app->get('/', function (Request $req) use ($app) {
-	$twig = $app['twig'];
-	return $twig->render('index.html');
+    $twig = $app['twig'];
+    return $twig->render('index.html', array("page_name" => "index-page"));
 });
 
 $app->get('/contact-us', function () use ($app) {
-   return $app['twig']->render('contact-us.html');
+   return $app['twig']->render('contact-us.html', array("page_name" => "contact-us-page"));
 });
 
-$app->get('/come_see_us', function () use ($app) {
-    return $app['twig']->render('come_see_us.html');
+$app->get('/come-see-us', function () use ($app) {
+    return $app['twig']->render('come_see_us.html', array("page_name" => "come-see-us-page"));
 });
 
-$app->get('/sponsor_us', function () use ($app) {
+$app->get('/sponsor-us', function () use ($app) {
     return $app['twig']->render('sponsor_us.html', array(
-        'flash' => ''
+        'flash' => '',
+        "page_name" => "sponsor-us-page"
     ));
 });
 
-$app->post('/sponsor_us', function (Request $req) use ($app) {
+$app->post('/sponsor-us', function (Request $req) use ($app) {
     if (!$req->get('bond') == '') {
         return $app['twig']->render('skate_with_us.html', array(
-            'flash' => $app['FORM_FLASH']
+            'flash' => $app['FORM_FLASH'],
+            "page_name" => "sponsor-us-page"
         ));
     }
 
@@ -77,21 +79,24 @@ $app->post('/sponsor_us', function (Request $req) use ($app) {
     ));
 
     return $app['twig']->render('sponsor_us.html', array(
-        'flash' => $app['FORM_FLASH']
+        'flash' => $app['FORM_FLASH'],
+        "page_name" => "sponsor-us-page"
     ));
 });
 
-$app->get('/skate_with_us', function () use ($app) {
+$app->get('/skate-with-us', function () use ($app) {
     return $app['twig']->render('skate_with_us.html', array(
-        'flash' => ''
+        'flash' => '',
+        "page_name" => "skate-with-us-page"
     ));
 });
 
-$app->post('/skate_with_us', function (Request $req) use ($app) {
+$app->post('/skate-with-us', function (Request $req) use ($app) {
     // secret squirrel field
     if (!$req->get('bond') == '') {
         return $app['twig']->render('skate_with_us.html', array(
-            'flash' => $app['FORM_FLASH']
+            'flash' => $app['FORM_FLASH'],
+            "page_name" => "skate-with-us-page"
         ));
     }
 
@@ -110,7 +115,8 @@ $app->post('/skate_with_us', function (Request $req) use ($app) {
     ));
 
     return $app['twig']->render('skate_with_us.html', array(
-        'flash' => $app['FORM_FLASH']
+        'flash' => $app['FORM_FLASH'],
+        "page_name" => "skate-with-us-page"
     ));
 });
 

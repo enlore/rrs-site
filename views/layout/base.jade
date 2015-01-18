@@ -10,7 +10,7 @@ html
     link(rel="stylesheet", href="/css/vendor/bootstrap.min.css")
     link(rel="stylesheet", href="/css/main.css")
 
-  body
+  body(class="{{ page_name }}")
     #banner-carousel.carousel.slide.banner-wrap.hidden-sm.hidden-xs()
       .carousel-inner
         .item.one.active
@@ -22,9 +22,9 @@ html
       .container
         .navbar-header
           button.navbar-toggle(data-toggle="collapse", data-target="#navbar-collapse")
-            span.icon-bar 
-            span.icon-bar 
-            span.icon-bar 
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
 
           a.navbar-brand(href="/")
             img.img-responsive(src="/img/logo-sm.png")
@@ -35,15 +35,15 @@ html
         #navbar-collapse.collapse.navbar-collapse
           ul.nav.navbar-nav.navbar-left
             li
-              a.active(href="/") Home
+              a(href="/") Home
             li
-              a(href="/come_see_us") See Us Skate
+              a(href="/come-see-us") See Us Skate
 
           ul.nav.navbar-nav.navbar-right
             li
-              a(href="/skate_with_us") Meet the Team
+              a(href="/skate-with-us") Meet the Team
             li
-              a(href="/sponsor_us") Sponsor Us
+              a(href="/sponsor-us") Sponsor Us
 
     .page-wrap
       block body
@@ -54,7 +54,7 @@ html
           p
             a(href="/contact-us") Contact Us
 
-          h3 
+          h3
             a(href="//facebook.com/redriversirens", target="_blank") Like Us on Facebook!
 
         p.pull-right &copy;2014 <a target="_blank" href="http://elcreativegroup.com">E|L Creative Group</a>
