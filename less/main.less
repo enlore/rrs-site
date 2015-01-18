@@ -155,7 +155,7 @@ p { font-size: 18px; }
     .navbar-nav > li > a.active {
         color: @active-link;
     }
-    
+
     .navbar-logo img {
         margin-top: 0;
         margin-left: 10px;
@@ -238,6 +238,11 @@ a.btn { margin-top: 20px; }
 
 .bout-schedule-wrap {
     margin-top: 2em;
+
+    tr.away-game {
+        background-color: #eee;
+    }
+
     th:nth-child(3), td:nth-child(3) {
         text-align: right;
     }
@@ -306,11 +311,11 @@ section.kick-ass {
         }
 
         @media (min-width: 510px) {
-            background-position: 0 -110px; 
+            background-position: 0 -110px;
         }
 
         @media (min-width: 610px) {
-            background-position: 0 -180px; 
+            background-position: 0 -180px;
         }
 
         .copy {
