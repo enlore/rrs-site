@@ -35,15 +35,15 @@ html
         #navbar-collapse.collapse.navbar-collapse
           ul.nav.navbar-nav.navbar-left
             li
-              a(href="/") Home
+              a(href="/", class="{{ index_active }}") Home
             li
-              a(href="/come-see-us") See Us Skate
+              a(href="/come-see-us", class="{{ come_see_us_active }}") See Us Skate
 
           ul.nav.navbar-nav.navbar-right
             li
-              a(href="/skate-with-us") Meet the Team
+              a(href="/skate-with-us", class="{{ skate_with_us_active }}") Meet the Team
             li
-              a(href="/sponsor-us") Sponsor Us
+              a(href="/sponsor-us", class="{{ sponsor_us_active }}") Sponsor Us
 
     .page-wrap
       block body

@@ -34,21 +34,30 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
 
 $app->get('/', function (Request $req) use ($app) {
     $twig = $app['twig'];
-    return $twig->render('index.html', array("page_name" => "index-page"));
+    return $twig->render('index.html', array(
+        "page_name" => "index-page",
+        "index_active" => "active"
+    ));
 });
 
 $app->get('/contact-us', function () use ($app) {
-   return $app['twig']->render('contact-us.html', array("page_name" => "contact-us-page"));
+    return $app['twig']->render('contact-us.html', array(
+        "page_name" => "contact-us-page"
+    ));
 });
 
 $app->get('/come-see-us', function () use ($app) {
-    return $app['twig']->render('come_see_us.html', array("page_name" => "come-see-us-page"));
+    return $app['twig']->render('come_see_us.html', array(
+        "page_name" => "come-see-us-page",
+        "come_see_us_active" => "active"
+    ));
 });
 
 $app->get('/sponsor-us', function () use ($app) {
     return $app['twig']->render('sponsor_us.html', array(
         'flash' => '',
-        "page_name" => "sponsor-us-page"
+        "page_name" => "sponsor-us-page",
+        "sponsor_us_active" => "active"
     ));
 });
 
@@ -56,7 +65,8 @@ $app->post('/sponsor-us', function (Request $req) use ($app) {
     if (!$req->get('bond') == '') {
         return $app['twig']->render('skate_with_us.html', array(
             'flash' => $app['FORM_FLASH'],
-            "page_name" => "sponsor-us-page"
+            "page_name" => "sponsor-us-page",
+            "sponsor_us_active" => "active"
         ));
     }
 
@@ -80,14 +90,16 @@ $app->post('/sponsor-us', function (Request $req) use ($app) {
 
     return $app['twig']->render('sponsor_us.html', array(
         'flash' => $app['FORM_FLASH'],
-        "page_name" => "sponsor-us-page"
+        "page_name" => "sponsor-us-page",
+        "sponsor_us_active" => "active"
     ));
 });
 
 $app->get('/skate-with-us', function () use ($app) {
     return $app['twig']->render('skate_with_us.html', array(
         'flash' => '',
-        "page_name" => "skate-with-us-page"
+        "page_name" => "skate-with-us-page",
+        "skate_with_us_active" => "active"
     ));
 });
 
@@ -96,7 +108,8 @@ $app->post('/skate-with-us', function (Request $req) use ($app) {
     if (!$req->get('bond') == '') {
         return $app['twig']->render('skate_with_us.html', array(
             'flash' => $app['FORM_FLASH'],
-            "page_name" => "skate-with-us-page"
+            "page_name" => "skate-with-us-page",
+            "skate_with_us_active" => "active"
         ));
     }
 
@@ -116,7 +129,8 @@ $app->post('/skate-with-us', function (Request $req) use ($app) {
 
     return $app['twig']->render('skate_with_us.html', array(
         'flash' => $app['FORM_FLASH'],
-        "page_name" => "skate-with-us-page"
+        "page_name" => "skate-with-us-page",
+        "skate_with_us_active" => "active"
     ));
 });
 
